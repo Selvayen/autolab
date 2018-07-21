@@ -1,13 +1,12 @@
 # Detection Lab
 
 ## Purpose
-This lab has been designed with defenders in mind. Its primary purpose is to allow the user to quickly build a Windows domain that comes pre-loaded with security tooling and some best practices when it comes to system logging configurations. It can easily be modified to fit most needs or expanded to include additional hosts.
+This lab was originally designed for a defender's lab, however, this has become a project for me to build out an Active Directory environment that can be used by penetration testers to test exploits and practice their skills. Its primary purpose is to allow the user to quickly build a Windows domain environment that comes fully configured. It can easily be modified to fit most needs or expanded to include additional hosts.
 
-NOTE: This lab has not been hardened in any way and runs with default vagrant credentials. Please do not connect or bridge it to any networks you care about. This lab is deliberately designed to be insecure; the primary purpose of it is to provide visibility and introspection into each host.
-
+NOTE: As with any testing lab boxes, please do not connect or bridge it to any networks you care about. 
 ---
 
-## Building DetectionLab from Scratch
+## Building AutoLab
 
 1. `cd` to the Packer directory and build the Windows 10 and Windows Server 2016 boxes using the commands below. Each build will take about 1 hour. 
 
