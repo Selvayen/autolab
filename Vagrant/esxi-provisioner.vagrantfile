@@ -1,0 +1,11 @@
+    cfg.vm.provider "vmware_esxi" do |esxi|
+      override.vm.box = "../Boxes/windows_2016_vmware.box"
+      esxi.esxi_hostname = "dc"
+      esxi.esxi_username = "codyseely"
+      esxi.esxi_password = 'prompt:'
+      #esxi.esxi_resource_pool = '/Vagrant'
+      #esxi.clone_from_vm = 'resource_pool/source_vm' 
+      esxi.guest_memsize = '2048'
+      esxi.guest_numvcpus = '2'
+      v.gui = true
+    end

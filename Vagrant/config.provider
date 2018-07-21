@@ -1,0 +1,22 @@
+    cfg.vm.provider "vmware_fusion" do |v, override|
+      override.vm.box = "../Boxes/windows_2016_vmware.box"
+      v.memory = 2048
+      v.cpus = 2
+      v.gui = true
+    end
+
+    cfg.vm.provider "vmware_desktop" do |v, override|
+      override.vm.box = "../Boxes/windows_2016_vmware.box"
+      v.memory = 2048
+      v.cpus = 2
+      v.gui = true
+    end
+
+    cfg.vm.provider "virtualbox" do |vb, override|
+      vb.gui = true
+      vb.customize ["modifyvm", :id, "--memory", 2048]
+      vb.customize ["modifyvm", :id, "--cpus", 2]
+      vb.customize ["modifyvm", :id, "--vram", "32"]
+      vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+      vb.customize ["setextradata", "global", "GUI/SuppressMessages", "all" ]
+    end
